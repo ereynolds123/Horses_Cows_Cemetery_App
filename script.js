@@ -1,18 +1,12 @@
 
 
 /* The screen order
-start --> teamName
-teamName--> gameState
+start --> gameState
 gameState--> congratulations || betterLuckNextTime
 congratulations --> start
 betterLuckNextTime --> start
 */
 
-
-/* teamName screen
-input teamName
-pick which side if in teamName state
-*/
 
 
 /* gameplay screen
@@ -37,10 +31,6 @@ let clickOnTeamOneButtons =
 
   document.getElementById('cemeteryTeamOne').addEventListener("click", subtractOneHundredTeamOne);
 
-  function clickedCemeteryTeamOne() {
-    console.log ("cemetery team one")
-  }
-
 //This section clicks on the various buttons for Team Two and adds to the point total for Team Two. 
 let clickOnTeamTwoButtons = 
   document.getElementById('horseTeamTwo').addEventListener("click", addTenTeamTwo);
@@ -48,46 +38,53 @@ let clickOnTeamTwoButtons =
   
   document.getElementById('cowTeamTwo').addEventListener("click", subtractOneTeamTwo);
 
-  document.getElementById('cemeteryTeamTwo').addEventListener("click", subtractOneHundredTeamrTwo);
+  document.getElementById('cemeteryTeamTwo').addEventListener("click", subtractOneHundredTeamTwo);
 
 
 //Adding to Team One Score
 function addTenTeamOne(){
   scoreTeamOne= scoreTeamOne +10;
-  console.log(scoreTeamOne)
+  document.getElementById("scoreTotalTeamOne").innerHTML = scoreTeamOne;
 };
 
 function subtractOneTeamOne(){
   scoreTeamOne= scoreTeamOne -1;
-  console.log(scoreTeamOne)
+  document.getElementById("scoreTotalTeamOne").innerHTML = scoreTeamOne;
 };
 
 function subtractOneHundredTeamOne(){
   scoreTeamOne= scoreTeamOne -100;
-  console.log(scoreTeamOne)
+  document.getElementById("scoreTotalTeamOne").innerHTML = scoreTeamOne;
 };
 
 
 //Adding to Team Two Score
 function addTenTeamTwo(){
   scoreTeamTwo= scoreTeamTwo +10;
-  console.log(scoreTeamTwo)
+  document.getElementById("scoreTotalTeamTwo").innerHTML = scoreTeamTwo;
 };
 
 function subtractOneTeamTwo(){
   scoreTeamTwo= scoreTeamTwo -1;
-  console.log(scoreTeamTwo)
+  document.getElementById("scoreTotalTeamTwo").innerHTML = scoreTeamTwo;
 };
 
-function subtractOneHundredTeamrTwo(){
+function subtractOneHundredTeamTwo(){
   scoreTeamTwo= scoreTeamTwo -100;
-  console.log(scoreTeamTwo)
+  document.getElementById("scoreTotalTeamTwo").innerHTML = scoreTeamTwo;
 };
 
 
 /*congratulations
 maybe a balloon animation feature eventually
 */
+
+let endMessage=
+document.getElementById('endButton').addEventListener("click", endMessageFunction);
+
+function endMessageFunction(){
+  console.log ("It ended")
+}
 
 /*betterLuckNextTime
 maybe an animation eventually
