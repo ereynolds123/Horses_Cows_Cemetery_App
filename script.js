@@ -2,10 +2,7 @@
 
 /* The screen order
 start --> gameState
-gameState--> congratulations || betterLuckNextTime
-congratulations --> start
-betterLuckNextTime --> start
-*/
+gameState--> start */
 
 
 
@@ -74,18 +71,3 @@ function subtractOneHundredTeamTwo(){
   document.getElementById("scoreTotalTeamTwo").innerHTML = scoreTeamTwo;
 };
 
-
-/*congratulations
-maybe a balloon animation feature eventually
-*/
-
-let endMessage=
-document.getElementById('endButton').addEventListener("click", endMessageFunction);
-
-function endMessageFunction(){
-  console.log ("It ended")
-}
-
-/*betterLuckNextTime
-maybe an animation eventually
-*/
