@@ -71,3 +71,18 @@ function subtractOneHundredTeamTwo(){
   document.getElementById("scoreTotalTeamTwo").innerHTML = scoreTeamTwo;
 };
 
+//Alert Winner and Restart the game
+
+function winningMessage(){
+  if (scoreTeamOne > scoreTeamTwo){
+    alert ("Congratulations Team One!")
+    window.location ="index.html";
+  }else if (scoreTeamTwo > scoreTeamOne){
+    alert ("Congratulation Team Two")
+    window.location ="index.html";
+  }else if (scoreTeamOne== scoreTeamTwo){
+    alert ("It's a tie")
+    window.location ="index.html";
+  }
+
+}
